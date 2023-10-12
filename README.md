@@ -12,16 +12,16 @@ This repository contains the source code for a website dedicated to books. It is
 * Laith Alkhraisha
 
 ## Figma Link
-You can view the design and mockups for the project on Figma by following this Figma -["Link"](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
+You can view the design and mockups for the project on Figma by following this Figma -[Link](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
 
 ## Repository Links
-Live Website["Link"]
+Live Website[Link]
 
 
-Organization Repository ["Link"](https://github.com/book-reading-project).
+Organization Repository [Link](https://github.com/book-reading-project).
 ## Trello Link
 We manage our project tasks and workflow using Trello. You can check our progress and upcoming tasks on our Trello Board.
-["Link"](https://trello.com/b/mQn7PzaD/oca-book-reading-project)
+[Link](https://trello.com/b/mQn7PzaD/oca-book-reading-project)
 
 ## Technologies and Skills
 This project is built using the following technologies and skills:
