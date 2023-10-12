@@ -12,7 +12,7 @@ This repository contains the source code for a website dedicated to books. It is
 * Laith Alkhraisha
 
 ## Figma Link
-You can view the design and mockups for the project on Figma by following this Figma -[Link](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
+You can view the design and mockups for the project on Figma by following this Figma [Link](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
 
 ## Repository Links
 Live Website[Link]
