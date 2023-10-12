@@ -4,12 +4,12 @@
 This repository contains the source code for a website dedicated to books. It is designed and developed by our team to provide an interactive platform for book enthusiasts to discover, discuss, and share their favorite books.
 
 ## Our Team
-Bayan Scram - Frontend Developer
-Nedal Prodected - Owner and Project Manager
-Sondos QA - Quality Assurance
-Lorans 
-Mustafa
-Laith 
+* Bayan Scram - Frontend Developer
+* Nedal Prodected - Owner and Project Manager
+* Sondos QA - Quality Assurance
+* Lorans 
+* Mustafa
+* Laith 
 
 ## Figma Link
 You can view the design and mockups for the project on Figma by following this Figma -["Link"](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
