@@ -15,7 +15,9 @@ This repository contains the source code for a website dedicated to books. It is
 You can view the design and mockups for the project on Figma by following this Figma -["Link"](https://www.figma.com/file/wtU6ZpBuHgqdXqydVIts8c/Book-Reading-Project?type=design&node-id=0-1&mode=design&t=m3dUd4v5hJUyKPHd-0).
 
 ## Repository Links
-Live Website["Link"]()
+Live Website["Link"]
+
+
 Organization Repository ["Link"](https://github.com/book-reading-project).
 # Trello Link
 We manage our project tasks and workflow using Trello. You can check our progress and upcoming tasks on our Trello Board.
