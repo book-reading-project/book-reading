@@ -6,7 +6,7 @@ This repository contains the source code for a website dedicated to books. It is
 ## Our Team
 * Bayan Alkhader - Scrum .
 * Nedal Hussein - Prodected Owner and Project Manager.
-* Sondos Abuyounis - QA  Quality Assurance.
+* Sondos Abuyounis - Quality Assurance.
 * Lorans Alkhateeb.
 * Mustafa Alsorkhi.
 * Laith Alkhraisha.
