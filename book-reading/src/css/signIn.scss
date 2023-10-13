@@ -1,0 +1,305 @@
+// Colours Palette
+
+$navBg: #0f294e;
+$shadows : grey;
+$hoverBorder: #dfba18; 
+$NavhoverTxt:  #9EA4BA; 
+$bgSign: #9EA4BA;
+$bgContact: #D9D9D9;
+$signup: white;
+// Font Properties
+    // Font Family 
+    $font : Arial, Helvetica, sans-serif;
+    // Font Size
+    $mainTxtSize: 20%;
+    $secondaryTxtSize: 10%;
+    // Font colours
+    $mainTxtCl: #0F2C59;
+    $secondaryTxtCl: grey;
+
+
+   
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+         overflow: hidden;
+    }
+    h1{
+        font-size: 45px;
+        font-family:  $font;
+
+    }
+    .imageBook {
+        background-image: url(/images/book.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40%;
+        height: 50%; 
+        position: absolute; 
+        top: 34%;
+        left: 2%;
+        z-index: 3;
+    }
+    
+    .signIn-container{
+        
+        width: 100%;
+        height: 100%;
+        background-color: $bgSign;
+        display: flex;
+        flex-direction: row;
+    }
+    .signIn-background{
+        background-color: $bgSign;
+        width: 35%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .signIn-createAcc{
+        background-color: $signup;
+        width: 65%;
+        height: 100%;
+         border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        z-index: 2;
+        
+    }
+    .Account{
+        width: 70%;
+        height: 80%;
+        margin-right: 7%;
+        display: flex;
+        flex-direction: column;
+    }
+
+   .Social{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 80%;
+   }
+   span{
+    margin-top: 20px;
+     margin-left: 3px;
+     font-size: 22px;
+     font-family:  $font;
+
+   }
+   .Facebook{
+    margin-left: 22px;
+   }
+   .Or{
+    margin-top: 4%;
+    margin-left: 20%;
+    font-size: 22px;
+    padding-left: 10%;
+    font-family:  $font;
+   }
+
+   form{
+    margin-top: 5%;
+   }
+   input{
+    width: 67%;
+    height: 24px;
+     border: none;
+    border-bottom:1px solid $mainTxtCl;
+    font-family:  $font;
+    font-size: 20px;
+
+   }
+   ::placeholder{
+    font-size: 21px;
+   }
+//    
+   .Password{
+    margin-top: 5%;
+   }
+
+   .ForgotPass{
+    font-family:  $font;
+    font-size: 18px;
+    float: right;
+    margin-right: 32%;
+    text-decoration: none;
+    color: $bgSign;
+
+   }
+   button{
+    background-color: $bgSign;
+    width: 28%;
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 20%;
+    border: $bgSign;
+    border-radius: 10px;
+    height: 6%;
+    font-size: 19px;
+    font-family: $font;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+   }
+
+   .DontAccount{
+    margin-top: 6%;
+    margin-left: 13%;
+    font-size: 21px;
+    font-family:  $font;
+
+   }
+.GoToSignUp{
+    color: $bgSign;
+    text-decoration: none;
+}
+
+@media(max-width:1176px){
+  span{
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  .Facebook{
+    height: 77%;
+    width: 14%;  
+    }
+    .imageGmail{
+      height: 77%;
+    width: 14%; 
+    }
+}
+
+
+@media (max-width: 750px) {
+    .signIn-container {
+      flex-direction: column;
+    }
+  
+    .signIn-background {
+      display: none;
+    }
+  
+    .signUp-createAcc {
+      width: 100%;
+      border-radius: 0;
+      align-items: center;
+    }
+    .Or{
+      font-size: 18px;
+    }
+  
+    .Account {
+      width: 90%;
+      margin-right: 0;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    .imageBook {
+      width: 70%; 
+      height: auto; 
+    }
+  
+    .DontAccount {
+      margin-top: 5%;
+      font-size: 16px;
+    }
+    span{
+font-size: 16px;
+    }
+    .Facebook{
+      height: 80%;
+      width: 12%;  
+      }
+      .imageGmail{
+        height: 80%;
+      width: 12%; 
+      }
+      h1{
+        font-size: 28px;
+      }
+      ::placeholder{
+        font-size: 16px;
+      }
+      button{
+        width: 19%;
+        height: 4%;
+        font-size: 14px;
+      }
+      input{
+        width: 50%;
+
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .signUp-container {
+      flex-direction: column;
+    }
+  
+    .signUp-background {
+      display: none;
+    }
+  
+    .signUp-createAcc {
+      width: 100%;
+      border-radius: 0;
+      align-items: center;
+    }
+    .Or{
+      font-size: 13px;
+    }
+  
+    .Account {
+      width: 80%;
+      margin-right: 0;
+    }
+  
+    input {
+      width: 70%;
+    }
+  
+    .imageBook {
+      width: 40%; 
+      height: auto; 
+    }
+  
+    .DontAccount {
+      margin-top: 5%;
+      font-size: 12px;
+    }
+    span{
+font-size: 12px;
+margin-bottom: 20px;
+
+    }
+    .Facebook{
+      height: 70%;
+      width: 12%;  
+      }
+      .imageGmail{
+        height: 70%;
+      width: 12%; 
+      }
+      h1{
+        font-size: 20px;
+      }
+      ::placeholder{
+        font-size: 12px;
+      }
+      button{
+        width: 14%;
+        height: 4%;
+        font-size: 9px;
+      }
+      input{
+        width: 50%;
+
+      }
+  }

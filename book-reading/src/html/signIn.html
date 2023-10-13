@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signIn.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="signIn-container">
+        <div class="imageBook"></div>
+    
+         <div class="signIn-background">
+        </div>
+         <div class="signIn-createAcc">
+            <div class="Account">
+        <h1>Log into your Account</h1>
+        <div class="Social">
+        <img class="imageGmail" src="https://cdn4.iconfinder.com/data/icons/picons-social/57/40-google-plus-2-512.png" alt="">
+        <span>Using Gmail</span>
+        <img class="Facebook" src="https://cdn.icon-icons.com/icons2/3261/PNG/512/facebook_circle_logo_icon_206764.png" alt="" >
+        <span>Using Facebook</span>
+            </div>
+            <div class="Or">OR</div>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <div class="Email">
+            <input type="text" id="Email" placeholder="Email Address">
+        </div><br>
+        <div class="Password">
+            <input type="text"  id="Password"   placeholder="Password">
+        </div> <br>
+        <div>
+            <a class="ForgotPass" href="">
+                Forgot Password?
+            </a>
+        </div>
+        <br>
+        <button type="submit">Login </button>
+    </form>
+
+    <div class="DontAccount">
+        Don't have an account? <a class="GoToSignUp" href="signUp.html">Sign Up</a>
+
+    <div id="message"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+
+        const firebaseConfig = {
+    apiKey: "AIzaSyDyKYMr5qn0g0lABuEYN-0alPzw-HAk9_g",
+    authDomain: "authweb-b710d.firebaseapp.com",
+    projectId: "authweb-b710d",
+    storageBucket: "authweb-b710d.appspot.com",
+    messagingSenderId: "954393792623",
+    appId: "1:954393792623:web:6366b1497d165f10edfd9a",
+    measurementId: "G-R2PMLML3FQ"
+  };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        const loginForm = document.getElementById("loginForm");
+        const emailInput = document.getElementById("Email");
+        const passwordInput = document.getElementById("Password");
+        const messageDiv = document.getElementById("message");
+
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            if (!email || !password) {
+        alert("الرجاء ملء جميع الحقول.");
+        return;
+    }
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // تم تسجيل الدخول بنجاح
+                    const user = userCredential.user;
+                    alert("تم الدخول بنجاح!");
+                })
+                .catch((error) => {
+                    // حدث خطأ أثناء تسجيل الدخول
+                    const errorMessage = error.message;
+                    alert("حدث خطأ: " + errorMessage);
+                });
+        });
+    </script>
+</body>
+</html>
