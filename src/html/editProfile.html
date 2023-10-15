@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/editProfile.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="imageBook"></div>
+    <div class="right-container">
+        <div class="column_details">
+            <div class="avatar-container">
+            <div class="avatar">
+                <img src="profile-picture.webp" alt="Profile Image">
+            </div> </div>
+         
+            <div class="content">
+                <button class="edit-picture-button">
+                    <i class="fas fa-camera"></i> Edit picture
+                  </button>
+            </div>
+            <div class="links">
+                <form action="/update-profile" method="post">
+                    <input type="text" name="username" placeholder="Enter new username">
+                    <input type="password" name="password" placeholder="Enter new password">
+                    <button type="submit" id="update">Update</button>
+                  </form>
+            </div>
+        
+        </div>
+    </div>
+</div>
+ </body>
+</html>
