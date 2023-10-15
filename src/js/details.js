@@ -38,10 +38,8 @@ function star5() {
 
 // Detils book fatch function
 
-localStorage.getItem();
-
 function detels_book() {
-    fetch("http://localhost:3000/mydata/65")
+    fetch("http://localhost:3000/mydata/60")
       .then(response => response.json())
       .then(data => {
           
@@ -93,8 +91,8 @@ function detels_book() {
                             
                         </div>
                         <div style="margin-left: 100px; margin-top: 100px;">
-                        <button style="border-radius: 100px; width: 100px;"> to read</button>
-                        <button style="border-radius: 100px; width: 100px; margin-left: 20px;">  Read  </button>
+                        <button id="${data.id}" style="border-radius: 100px; width: 100px;" onclick="addlist(this)"> WishList </button>
+                        <button  style="border-radius: 100px; width: 100px; margin-left: 20px;">  Download  </button>
                     </div>
                     </div>
                    
@@ -147,8 +145,8 @@ function detels_book() {
                             
                         </div>
                         <div style="margin-left: 100px; margin-top: 100px;">
-                        <button style="border-radius: 100px; width: 100px;"> to read</button>
-                        <button style="border-radius: 100px; width: 100px; margin-left: 20px;">  Read  </button>
+                        <button id="${data.id}" style="border-radius: 100px; width: 100px;" onclick="addlist(this)"> WishList </button>
+                        <button  style="border-radius: 100px; width: 100px; margin-left: 20px;">  Download  </button>
                     </div>
                     </div>
                    
@@ -203,8 +201,8 @@ function detels_book() {
                             
                         </div>
                         <div style="margin-left: 100px; margin-top: 100px;">
-                        <button style="border-radius: 100px; width: 100px;"> to read</button>
-                        <button style="border-radius: 100px; width: 100px; margin-left: 20px;">  Read  </button>
+                        <button id="${data.id}" style="border-radius: 100px; width: 100px;" onclick="addlist(this)"> WishList </button>
+                        <button  style="border-radius: 100px; width: 100px; margin-left: 20px;">  Download  </button>
                     </div>
                     </div>
                    
@@ -258,8 +256,8 @@ function detels_book() {
                             
                         </div>
                         <div style="margin-left: 100px; margin-top: 100px;">
-                        <button style="border-radius: 100px; width: 100px;"> to read</button>
-                        <button style="border-radius: 100px; width: 100px; margin-left: 20px;">  Read  </button>
+                        <button id="${data.id}" style="border-radius: 100px; width: 100px;" onclick="addlist(this)"> WishList </button>
+                        <button  style="border-radius: 100px; width: 100px; margin-left: 20px;">  Download  </button>
                     </div>
                     </div>
                    
@@ -312,8 +310,8 @@ function detels_book() {
                             
                         </div>
                         <div style="margin-left: 100px; margin-top: 100px;">
-                        <button style="border-radius: 100px; width: 100px;"> to read</button>
-                        <button style="border-radius: 100px; width: 100px; margin-left: 20px;">  Read  </button>
+                        <button id="${data.id}" style="border-radius: 100px; width: 100px;" onclick="addlist(this)"> WishList </button>
+                        <button  style="border-radius: 100px; width: 100px; margin-left: 20px;">  Download  </button>
                     </div>
                     </div>
                    
@@ -341,7 +339,7 @@ function detels_book() {
       
   console.log(products);
           const cards = document.getElementById('card-slader');
-          products.slice(0, 5).map(product => {
+          products.slice(0,5).map(product => {
             const card = document.createElement('div');
             
             
@@ -390,7 +388,7 @@ function addcom() {
     // Assuming you have a proper class for the stars like "checked" for selected stars
     let rate =  document.querySelectorAll('[style*="color: orange"]').length;
 
-    fetch('http://localhost:3000/commint', {
+    fetch("http://localhost:3000/commint", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -422,7 +420,7 @@ function render2() {
           }));
       
   console.log(products);
-  products.forEach(product => {
+  products.slice(0,3).map(product => {
           const cards = document.getElementById('comrender');
         
               
@@ -468,7 +466,9 @@ function render2() {
                 
             </div>
 
-
+            <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
+  
           
 
             </div>
@@ -516,9 +516,10 @@ function render2() {
                   
               </div>
   
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
   
-            
-  
+
               </div>
   
   
@@ -563,8 +564,8 @@ function render2() {
                   
               </div>
   
-  
-            
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
   
               </div>
   
@@ -611,7 +612,8 @@ function render2() {
               </div>
   
   
-            
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
   
               </div>
   
@@ -658,7 +660,8 @@ function render2() {
               </div>
   
   
-            
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
   
               </div>
   
@@ -705,7 +708,8 @@ function render2() {
               </div>
   
   
-            
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="updateitem(this)"> Edit </button>
+              <button id="${product.id}" style="width: 120px;border-radius: 100px;margin-top: 50px;margin-bottom: 50px;" type="submit"  onclick="deleteItem(this)"> Delete</button>
   
               </div>
   
@@ -724,3 +728,63 @@ function render2() {
   render2()
     
 
+  function deleteItem(e) {
+    const deletitem=e.id;
+    console.log(deletitem);
+    fetch(`http://localhost:3000/commint/${deletitem}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            
+        },
+    })
+    const cards= document.getElementById('comrender')
+    cards.innerHTML=``;
+    render2();
+  }
+  function updateitem(e) {
+    let updateite =e.id;
+
+    
+    let tt=document.getElementById("commint").value;
+    let rate =  document.querySelectorAll('[style*="color: orange"]').length;
+    
+    fetch(`http://localhost:3000/commint/${updateite}`, {
+        method: 'put',
+        headers: {
+            'Content-Type': 'application/json',
+            
+        },
+        body: JSON.stringify({
+            "commint":tt,
+            "rate":rate
+        
+        }),
+
+        
+    })
+    const cards= document.getElementById('comrender')
+    cards.innerHTML=``;
+    render2();
+  }
+  function addlist(e) {
+   let bookid=e.id
+
+    fetch("http://localhost:3000/list", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            
+            "bookid": bookid,
+            
+        }),
+        
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+   
+}
