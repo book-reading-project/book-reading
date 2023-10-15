@@ -1,1 +1,259 @@
-/*# sourceMappingURL=details.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap");
+.cards-container {
+  margin: 8%;
+}
+
+.my-element {
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+.my-element:hover {
+  background-color: #FF5733;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  align-items: center;
+  color: #393232;
+}
+
+img {
+  width: 80%;
+  min-height: 90%;
+  display: block;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 20px;
+}
+
+.card {
+  background-color: #FFF;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 20px 50px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1.25rem;
+  padding-right: 1.25rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  transition: 0.15s ease-in;
+}
+.card:hover, .card:focus-within {
+  box-shadow: 0 0 10px 2px orange, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+  transform: translatey(-15px);
+  border: 3px solid orange;
+}
+
+.card-image {
+  border-radius: 1%;
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-header a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-decoration: none;
+  color: inherit;
+  will-change: transform;
+}
+.card-header a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.icon-button {
+  border: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  transition: 0.25s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 8px 0 rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  cursor: pointer;
+  color: #565656;
+}
+.icon-button:hover, .icon-button:focus {
+  background-color: #b5ccd6;
+  color: #FFF;
+}
+
+.card-footer {
+  border-top: 1px solid #000000;
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  color: #787878;
+}
+.card-meta:first-child:after {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: currentcolor;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.card-meta svg {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+}
+
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+
+/****** Style Star Rating Widget *****/
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+} /* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+@media screen and (max-width: 945px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 729px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 542px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+.slider-btn {
+  position: absolute;
+  top: 310%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+#bookimg {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.checked {
+  color: orange;
+}/*# sourceMappingURL=details.css.map */
