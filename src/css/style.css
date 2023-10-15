@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 .cat-row {
   display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 5%;
 }
 
-.cat-row img {
-  width: 15%;
-  margin: 2%;
+.cat-col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 6%;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar_container {
@@ -1077,4 +1081,44 @@ body {
 .footbar_contactus-link:hover {
   color: #dfba18;
   font-size: 40px;
+}
+
+.slideshow {
+  display: flex;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  /* margin: 0 20px;
+  padding: 10px; */
+  border-radius: 10px;
+  transform: translateX(-100px);
+}
+
+.content img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 0 15px 5px grey;
+}
+
+.content {
+  font-style: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.details {
+  margin-left: 48%;
+  width: 100%;
+  justify-content: center;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
