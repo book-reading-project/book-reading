@@ -96,18 +96,21 @@ $white: white;
 
 // Cards container styling 
 .catalog_section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 8%;
-    margin-bottom: 10%;
+    margin: 6%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2%;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: space-around;
+    // margin-top: 8%;
+    // margin-bottom: 10%;
 }
-.catalog_section div{
-    background-color: $mainTxtCl;
-    width: 1fr;
-    height: 5fr;
-}
+// .catalog_section div{
+//     background-color: $mainTxtCl;
+//     width: 1fr;
+//     height: 5fr;
+// }
 
 // Nav bar styling 
 .navbar_container{
@@ -310,3 +313,262 @@ padding-bottom: 2%;
     font-size:40px;
 }
 
+
+
+
+
+.my-element {
+    background-color: #3498db;
+    color: #fff; 
+    transition: background-color 0.3s; 
+  
+    &:hover {
+      background-color: $NavhoverTxt; 
+    }
+  }
+  *, *:after, *:before {
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Lexend", sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      //display: flex;
+      align-items: center;
+      //justify-content: center;
+      color: #393232;
+  }
+  // image
+  img {
+  width:80%;
+  min-height:90%;
+  display: block;
+  }
+  
+  .card-list {
+      //width: 90%;
+      //max-width: 200px;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      gap: 20px;
+  }
+  
+  .card {
+      
+      background-color: #FFF;
+      box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 1.25rem;
+      padding-right: 1.25rem;
+      height:fit-content;
+      position: relative;
+      transition: .15s ease-in;
+      
+      &:hover, &:focus-within {
+          box-shadow: 0 0 10px 2px orange, 0 10px 60px 0 rgba(#000, .1);
+          transform: translatey(-15px);
+          border:3px solid orange;
+      }
+  }
+  // image
+  .card-image {
+      border-radius: 1%;
+      width: 100%;
+      overflow: hidden;
+  }
+  // BOOK NAme
+  .card-header {
+      //margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+          font-weight: 600;
+          font-size: 0.9rem;
+          line-height: 1.25;
+          text-decoration: none;
+          color: inherit;
+          will-change: transform;
+          &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+          }
+      }
+  
+      
+      
+  }
+  // Background of the bookmark icon 
+  .icon-button {
+      border: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 1.8rem;
+      height: 1.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      transition: .25s ease;
+      box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .05);
+      z-index: 1;
+      cursor: pointer;
+      color: #565656;
+  // Bookmark icon 
+      svg {
+          width: 1em;
+          height: 1em;
+      }
+      &:hover, &:focus {
+          background-color: #b5ccd6;
+          color: #FFF;
+      }
+  }
+  
+  .card-footer {
+      border-top: 1px solid #ddd;
+      //padding-top: 1rem;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  
+  .card-meta {	
+      display: flex;
+      align-items: center;
+      color: #787878;
+      &:first-child:after {
+          display: block;
+          content: "";
+          width: 4px;
+          height: 2px;
+          border-radius: 50%;
+          background-color: currentcolor;
+          margin-left: .75rem;
+          margin-right: .75rem;
+      }
+      svg {
+          flex-shrink: 0;
+          width: 1em;
+          height: 1em;
+          margin-right: .25em;
+      }
+  }
+  
+  //@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+  
+  fieldset, label { margin: 0; padding: 0; }
+  
+  /****** Style Star Rating Widget *****/
+  
+  .rating { 
+    border: none;
+    float: left;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+  
+  .rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .rating > label { 
+    color: #ddd; 
+   float: right; 
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  
+  .rating > input:checked ~ label, /* show gold star when clicked */
+  .rating:not(:checked) > label:hover, /* hover current star */
+  .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+  
+  .rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+  
+  @media screen and (max-width: 945px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 765px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 729px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 630px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 542px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .catalog_section {
+        //width: 90%;
+        //max-width: 200px;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+  }
